@@ -6,8 +6,9 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Build maven') {
+        stage('Build maven from another branch') {
             steps {
+                echo "hello from another branch"
                 sh 'mvn clean verify'
             }
         }
