@@ -25,9 +25,6 @@ public class ImpotRevenu {
         double tranche2 = Math.max((Math.min(Math.max(revenuSurQuotient, deuxiemeFraction), troisiemeFraction) - deuxiemeFraction) * baremeDeuxiemeTranche, 0);
         double tranche3 = Math.max((Math.min(Math.max(revenuSurQuotient, troisiemeFraction), derniereFraction) - troisiemeFraction) * baremeTroisiemeTranche, 0);
         double tranche4 = Math.max((Math.max(revenuSurQuotient, derniereFraction) - derniereFraction) * baremeQuatriemeTranche, 0);
-        double impot = tranche1 + tranche2 + tranche3 + tranche4;
-
-
-        return impot * nombreDeParts;
+        return tranche1 + tranche2 + tranche3 + tranche4 * nombreDeParts;
     }
 }
