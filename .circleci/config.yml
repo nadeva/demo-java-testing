@@ -26,7 +26,11 @@ jobs:
       # Then run your tests!
       - run:
           name: Test
-          command: mvn test
+          command: mvn -B test
+
+      - run:
+          name: Test
+          command: mvn -B failsafe:integration-test
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
