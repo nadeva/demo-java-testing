@@ -5,7 +5,7 @@ public class ImpotRevenu {
 
     public static double calculImpots(double revenuBrut, int nombreDeParts) {
 
-        double revenuNet = revenuBrut * 0.9;
+        double revenuNet = getRevenuNet(revenuBrut);
         double revenuSurQuotient = revenuNet / nombreDeParts;
 
         final int premiereFraction = 10225;
@@ -28,4 +28,9 @@ public class ImpotRevenu {
 
         return (tranche1 + tranche2 + tranche3 + tranche4) * nombreDeParts;
     }
+
+    private static double getRevenuNet(double revenuBrut) {
+        return revenuBrut * 0.9;
+    }
+
 }
