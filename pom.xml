@@ -9,9 +9,9 @@
 
     <packaging>jar</packaging>
     <name>Demo java testing</name>
-    <description>Automated acceptance tests for Caravan</description>
+    <description>Testing demo</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>19</java.version>
 
         <encoding>UTF-8</encoding>
         <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
