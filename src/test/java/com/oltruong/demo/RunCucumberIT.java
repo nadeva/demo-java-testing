@@ -11,9 +11,6 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 @Suite
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features")
-@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")
-//@CucumberOptions(features = "classpath:features", format = {"html:target/cucumber-html-report","json:target/cucumber.json"})
+@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty,json:target/cucumber.json,html:target/cucumber-html-report.html")
 public class RunCucumberIT {
-
-
 }
