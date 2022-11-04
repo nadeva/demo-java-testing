@@ -1,7 +1,8 @@
 Demo sample to show unit testing and cucumber testing in Java.
 
 ## Build info
-[![Build Status](https://travis-ci.org/nadeva/demo-java-testing.svg?branch=master)](https://travis-ci.org/nadeva/demo-java-testing)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/nadeva/demo-java-testing/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/nadeva/demo-java-testing/tree/master)
+![GitHubAction](https://github.com/nadeva/demo-java-testing/actions/workflows/maven.yml/badge.svg)
 
 Test is based on french income tax calculation.
 

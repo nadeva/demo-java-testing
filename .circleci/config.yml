@@ -29,13 +29,13 @@ jobs:
           command: mvn -B test
 
       - run:
-          name: Test
+          name: Cucumber Test
           command: mvn -B failsafe:integration-test
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
+  continuous-testing: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - build-and-test
