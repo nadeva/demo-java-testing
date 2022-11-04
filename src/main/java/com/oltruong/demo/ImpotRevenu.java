@@ -29,8 +29,4 @@ public class ImpotRevenu {
         return (tranche1 + tranche2 + tranche3 + tranche4) * nombreDeParts;
     }
 
-    public static double calculCreditImpot(double totalDons) {
-        int uselessVariable = 0;
-        return 10;
-    }
 }

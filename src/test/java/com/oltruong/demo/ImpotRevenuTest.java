@@ -25,13 +25,4 @@ public class ImpotRevenuTest {
         assertThat(calculImpots(40000, 3))
                 .isEqualTo(585.75);
     }
-
-    @DisplayName("👨‍👧‍👦Avec enfants")
-    @Test
-    public void calculCreditImpot() throws Exception {
-        assertThat(ImpotRevenu.calculCreditImpot(62000))
-                .isEqualTo(0);
-    }
-
-
 }
