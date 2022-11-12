@@ -36,5 +36,11 @@ public class ImpotRevenu {
     private static double getRevenuNet(double revenuBrut) {
         return revenuBrut * 0.9;
     }
+    private static double getRevenuNetDummy(double revenuBrut) {
+        int value1=0;
+        int value2=10/value1;
+
+        return revenuBrut * 0.9;
+    }
 
 }
