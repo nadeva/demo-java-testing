@@ -21,12 +21,16 @@ public class ImpotRevenu {
         final double baremeQuatriemeTranche = 0.45;
 
 
-        double tranche1 = Math.max((Math.min(Math.max(revenuSurQuotient, premiereFraction), deuxiemeFraction) - premiereFraction) * baremePremiereTranche, 0);
-        double tranche2 = Math.max((Math.min(Math.max(revenuSurQuotient, deuxiemeFraction), troisiemeFraction) - deuxiemeFraction) * baremeDeuxiemeTranche, 0);
-        double tranche3 = Math.max((Math.min(Math.max(revenuSurQuotient, troisiemeFraction), derniereFraction) - troisiemeFraction) * baremeTroisiemeTranche, 0);
-        double tranche4 = Math.max((Math.max(revenuSurQuotient, derniereFraction) - derniereFraction) * baremeQuatriemeTranche, 0);
+        double tranche1 = calculTranche(Math.min(Math.max(revenuSurQuotient, premiereFraction), deuxiemeFraction), premiereFraction, baremePremiereTranche);
+        double tranche2 = calculTranche(Math.min(Math.max(revenuSurQuotient, deuxiemeFraction), troisiemeFraction), deuxiemeFraction, baremeDeuxiemeTranche);
+        double tranche3 = calculTranche(Math.min(Math.max(revenuSurQuotient, troisiemeFraction), derniereFraction), troisiemeFraction, baremeTroisiemeTranche);
+        double tranche4 = calculTranche(Math.max(revenuSurQuotient, derniereFraction), derniereFraction, baremeQuatriemeTranche);
 
         return (tranche1 + tranche2 + tranche3 + tranche4) * nombreDeParts;
+    }
+
+    private static double calculTranche(double revenuSurQuotient, int premiereFraction, double baremePremiereTranche) {
+        return Math.max((revenuSurQuotient - premiereFraction) * baremePremiereTranche, 0);
     }
 
     private static double getRevenuNet(double revenuBrut) {
