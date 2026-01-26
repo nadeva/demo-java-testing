@@ -17,7 +17,7 @@
         <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
 
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
-        <assertj-core.version>3.23.1</assertj-core.version>
+        <assertj-core.version>3.27.7</assertj-core.version>
         <maven-failsafe-plugin.version>3.0.0-M7</maven-failsafe-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
         <junit.version>5.9.0</junit.version>
